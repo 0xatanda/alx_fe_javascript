@@ -13,6 +13,9 @@
     </div>
   </header>
 
+  <!-- Notification area -->
+  <div id="notificationContainer"></div>
+
   <main>
     <div class="container">
       
@@ -29,7 +32,7 @@
       <section class="quote-section">
         <label for="categorySelect">Select Category:</label>
         <select id="categorySelect"></select>
-        <button id="showQuoteBtn">Show Random Quote</button>
+        <button id="showQuoteBtn" type="button">Show Random Quote</button>
 
         <!-- Quote Display -->
         <div id="quoteDisplay" class="quote-display"></div>
@@ -56,8 +59,12 @@
           accept=".json"
           onchange="importFromJsonFile(event)"
         />
-        <div id="syncStatus"></div>
-        <div id="conflictsPanel"></div>
+        
+        <!-- Sync status -->
+        <div id="syncStatus" class="status"></div>
+        
+        <!-- Conflict resolution panel -->
+        <div id="conflictsPanel" class="conflicts"></div>
       </section>
     </div>
   </main>
