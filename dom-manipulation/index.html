@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Dynamic Quote Generator</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
   <div class="container">
@@ -25,8 +25,19 @@
       <input type="text" id="quoteCategory" placeholder="Enter category" required>
       <button type="submit">Add Quote</button>
     </form>
+
+    <!-- Import / Export Controls -->
+    <h2>Manage Quotes</h2>
+    <button id="exportBtn" type="button">Export Quotes (JSON)</button>
+    <input
+      type="file"
+      id="importFile"
+      name="importFile"
+      accept=".json"
+      onchange="importFromJsonFile(event)"
+    />
   </div>
 
-  <script src="index.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
