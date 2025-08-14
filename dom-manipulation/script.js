@@ -92,7 +92,7 @@ let quotes = JSON.parse(localStorage.getItem('quotes')) || [
   { text: "Great things never come from comfort zones.", category: "Motivation" }
 ];
 
-// ===== DOM Elements =====
+
 // ===== DOM Elements =====
 const categorySelect = document.getElementById('categorySelect');
 const categoryFilter = document.getElementById('categoryFilter');
@@ -166,7 +166,7 @@ function filterQuotes() {
   if (filteredList.length === 0) {
     quoteDisplay.textContent = "No quotes found for this category.";
   } else {
-    quoteDisplay.textContent = `"${filteredList[0].text}"`;
+    quoteDisplay.textContent = `"${filteredList[0].text}"`; // Show first match
   }
 }
 
@@ -228,11 +228,10 @@ function importFromJsonFile(event) {
 
 // ===== Event Listeners =====
 showQuoteBtn.addEventListener('click', showRandomQuote);
-categorySelect.addEventListener('change', showRandomQuote); // trigger random quote when category changes
-categoryFilter.addEventListener('change', filterQuotes);
 addQuoteForm.addEventListener('submit', createAddQuoteForm);
 exportBtn.addEventListener('click', exportQuotes);
 importFile.addEventListener('change', importFromJsonFile);
+categoryFilter.addEventListener('change', filterQuotes);
 
 // ===== Initial Load =====
 populateCategories();
@@ -244,5 +243,5 @@ if (lastQuote) {
   quoteDisplay.textContent = `"${parsedQuote.text}"`;
 }
 
-// Apply last saved filter immediately
+// Apply last saved filter
 filterQuotes();
