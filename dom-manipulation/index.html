@@ -13,8 +13,8 @@
     </div>
   </header>
 
-  <!-- Notification area -->
-  <div id="notificationContainer"></div>
+  <!-- Notification Area -->
+  <div id="notification" class="notification" style="display:none;"></div>
 
   <main>
     <div class="container">
@@ -24,7 +24,6 @@
         <label for="categoryFilter">Filter by Category:</label>
         <select id="categoryFilter" onchange="filterQuotes()">
           <option value="all">All Categories</option>
-          <!-- Dynamically populated categories -->
         </select>
       </section>
 
@@ -33,9 +32,13 @@
         <label for="categorySelect">Select Category:</label>
         <select id="categorySelect"></select>
         <button id="showQuoteBtn" type="button">Show Random Quote</button>
-
-        <!-- Quote Display -->
         <div id="quoteDisplay" class="quote-display"></div>
+      </section>
+
+      <!-- Quotes List -->
+      <section>
+        <h2>All Quotes</h2>
+        <ul id="quotesList"></ul>
       </section>
 
       <!-- Add Quote Form -->
@@ -59,11 +62,11 @@
           accept=".json"
           onchange="importFromJsonFile(event)"
         />
-        
-        <!-- Sync status -->
+
+        <!-- Sync Status -->
         <div id="syncStatus" class="status"></div>
-        
-        <!-- Conflict resolution panel -->
+
+        <!-- Conflict Resolution Panel -->
         <div id="conflictsPanel" class="conflicts"></div>
       </section>
     </div>
