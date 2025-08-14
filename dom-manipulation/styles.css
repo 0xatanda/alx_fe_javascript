@@ -1,3 +1,4 @@
+/* ===== Global Styles ===== */
 body {
   font-family: Arial, sans-serif;
   background: #f4f4f4;
@@ -5,8 +6,9 @@ body {
   padding: 0;
 }
 
+/* ===== Container ===== */
 .container {
-  max-width: 600px;
+  max-width: 700px;
   margin: 40px auto;
   padding: 20px;
   background: white;
@@ -14,23 +16,47 @@ body {
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
+/* ===== Header, Main, Footer ===== */
+header, main, footer {
+  margin-bottom: 20px;
+}
+
+header h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+header p {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+}
+
+/* ===== Headings ===== */
 h1, h2 {
   text-align: center;
   margin-bottom: 15px;
 }
 
-/* Ensure spacing between fields and container edges */
+/* ===== Form & Controls ===== */
 select,
 input[type="text"],
 button,
 input[type="file"] {
   display: block;
-  width: calc(100% - 20px); /* prevents touching container edge */
+  width: calc(100% - 20px);
   margin: 8px auto;
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
   box-sizing: border-box;
+}
+
+/* Special styling for category filter dropdown */
+#categoryFilter {
+  background: #eef6ff;
+  border-color: #007bff;
+  font-weight: bold;
 }
 
 button {
@@ -46,6 +72,7 @@ button:hover {
   background: #218838;
 }
 
+/* ===== Quote Display ===== */
 .quote-display {
   margin-top: 20px;
   padding: 15px;
@@ -55,6 +82,7 @@ button:hover {
   min-height: 50px;
 }
 
+/* ===== File Input ===== */
 input[type="file"] {
   padding: 6px;
   background: #f8f8f8;
@@ -64,4 +92,13 @@ input[type="file"] {
 
 input[type="file"]:hover {
   background: #eee;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
 }
